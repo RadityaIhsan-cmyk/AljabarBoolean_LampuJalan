@@ -252,3 +252,40 @@ footer {
 .kondisi-lampu .mati { display: none; }
 .scene.on ~ .status .menyala { display: inline; }
 .scene:not(.on) ~ .status .mati { display: inline; }
+
+/* Perhitungan NOT, AND, OR di bawah sensor */
+.perhitungan {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.kotak-hitung {
+  min-width: 0;
+  min-height: 115px;
+  padding: 16px;
+  border-radius: 15px;
+  color: white;
+  background: #15065f;
+}
+
+.kotak-hitung span {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 13px;
+}
+
+.kotak-hitung strong {
+  display: block;
+  font-size: 12px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 480px) {
+  .perhitungan { gap: 8px; }
+  .kotak-hitung { padding: 12px 8px; min-height: 106px; }
+  .kotak-hitung span { font-size: 16px; }
+  .kotak-hitung strong { font-size: 11px; }
+}

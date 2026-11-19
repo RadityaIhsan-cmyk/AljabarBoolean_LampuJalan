@@ -13,6 +13,10 @@ function cekLampu() {
   let otomatis = y * notZ;
   let hasil = (x === 1 || otomatis === 1) ? 1 : 0;
 
+  document.getElementById('not').textContent = 'z′ = 1 - ' + z + ' = ' + notZ;
+  document.getElementById('and').textContent = 'y · z′ = ' + y + ' · ' + notZ + ' = ' + otomatis;
+  document.getElementById('or').textContent = 'F = ' + x + ' + ' + otomatis + ' = ' + hasil;
+
   document.getElementById('jam').textContent = String(jam).padStart(2, '0') + ':00';
   document.getElementById('formula').textContent = 'F = ' + x + ' + (' + y + ' · ' + notZ + ') = ' + hasil;
   document.getElementById('scene').classList.toggle('on', hasil === 1);
