@@ -35,3 +35,100 @@ main { max-width: 1160px; padding: 38px 20px 65px; }
   .grid { grid-template-columns: 1fr; }
   .formula-card { margin-top: 30px; }
 }
+
+
+/* Tampilan hasil simulasi */
+.output .judul { margin-bottom: 26px; }
+.output .judul h2 { margin: 0; font-size: 25px; letter-spacing: 0; color: #14273e; }
+
+.scene {
+  height: 344px;
+  background: linear-gradient(#1c2f52, #3b5275);
+  border-radius: 12px;
+}
+.scene.day { background: linear-gradient(#80c2eb, #d7eaf7); }
+.moon {
+  top: 13%;
+  right: 13%;
+  width: 40px;
+  height: 40px;
+  background: #e9eefe;
+  box-shadow: none;
+}
+.day .moon { background: #ffe389; box-shadow: 0 0 30px #ffebad; }
+
+.pole {
+  bottom: 12%;
+  left: 46%;
+  height: 66%;
+  width: 12px;
+  border-radius: 0;
+  background: #626c78;
+}
+.arm {
+  width: 104px;
+  height: 12px;
+  border-radius: 0;
+  background: #626c78;
+}
+.head {
+  top: 4px;
+  left: 82px;
+  width: 53px;
+  height: 20px;
+  border-radius: 10px;
+  clip-path: none;
+  background: #606974;
+  z-index: 4;
+}
+.head:after {
+  left: 4px;
+  bottom: -2px;
+  width: 45px;
+  height: 7px;
+  border-radius: 50%;
+  background: #7d8589;
+}
+.on .head:after {
+  background: #ffe089;
+  box-shadow: 0 0 18px 7px #ffcf62;
+}
+.beam {
+  bottom: 12%;
+  left: calc(46% + 107px);
+  width: 22%;
+  height: 60%;
+  transform: translateX(-50%);
+  clip-path: polygon(37% 0, 63% 0, 100% 100%, 0 100%);
+  background: linear-gradient(#ffce6f8f, #ffda7d0b);
+}
+.road {
+  height: 12%;
+  background: #2d3d42;
+}
+.road:after { content: none; }
+
+.output .status { margin-top: 28px; align-items: flex-end; }
+.output .status small { font-size: 13px; color: #71839b; }
+.output .status h2 {
+  font-size: 29px;
+  margin: 7px 0 0;
+  color: #13283d;
+}
+.output .status strong {
+  color: #10253c;
+  font: 700 19px 'Space Grotesk', sans-serif;
+  white-space: nowrap;
+}
+.output .alasan {
+  color: #586d87;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 22px 0 7px;
+}
+@media (max-width: 540px) {
+  .scene { height: 270px; }
+  .output .status strong { font-size: 14px; }
+  .output .status h2 { font-size: 25px; }
+  .output .alasan { font-size: 14px; }
+}
