@@ -1,7 +1,5 @@
-
 <!doctype html>
 <html lang="id">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,14 +7,10 @@
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
-
 <body>
   <main>
-
-    <!-- SECTION INPUT DAN OUTPUT -->
     <div class="grid">
-
-      <!-- SECTION INPUT -->
+      <!-- Pengaturan simulasi -->
       <section class="panel">
         <div class="judul">
           <small>01 / INPUT</small>
@@ -32,22 +26,13 @@
         <label for="waktu">y — Waktu simulasi</label>
         <div class="timer">
           <div class="jam">
-            <div>
-              <strong id="jam">00:00</strong>
-              <small id="y">y = 1 — Malam</small>
-            </div>
+            <strong id="jam">00:00</strong>
+            <small id="y">y = 1 — Malam</small>
           </div>
-
           <input type="range" id="waktu" min="0" max="1380" step="60" value="0" aria-label="Geser jam simulasi">
-
           <div class="skala">
-            <span>00:00</span>
-            <span>06:00</span>
-            <span>12:00</span>
-            <span>18:00</span>
-            <span>23:00</span>
+            <span>00:00</span><span>06:00</span><span>12:00</span><span>18:00</span><span>23:00</span>
           </div>
-
           <p>Geser untuk memilih waktu. Malam pukul 18:00–05:59.</p>
         </div>
 
@@ -58,20 +43,15 @@
         </select>
 
         <button id="reset" type="button">↺ Reset simulasi</button>
-
         <p class="note">
-          Lampu menyala jika kendali manual aktif, atau jika
-          <b>malam DAN gelap</b>. Sensor saja tidak cukup
-          untuk menyalakan lampu.
+          Lampu menyala jika kendali manual aktif, atau jika <b>malam DAN gelap</b>.
+          Sensor saja tidak cukup untuk menyalakan lampu.
         </p>
       </section>
 
-      <!-- SECTION OUTPUT -->
+      <!-- Hasil simulasi -->
       <section class="panel output">
-        <div class="judul">
-          <h2>Hasil simulasi</h2>
-        </div>
-
+        <h2>Hasil simulasi</h2>
         <div id="scene" class="scene">
           <div class="moon"></div>
           <div class="beam"></div>
@@ -89,73 +69,9 @@
           </div>
           <strong id="formula">F = 0 + 1 = 1</strong>
         </div>
-<<<<<<< HEAD
-
-        <aside class="formula-card">
-  <small>FUNGSI BOOLEAN</small>
-  <strong>F = x + yz′</strong>
-  <small>OR · AND · NOT</small>
-
-  <div class="ringkas-hitung">
-    <div class="item-hitung">
-      <span>NOT</span>
-      <b id="not"></b>
-    </div>
-    <div class="item-hitung">
-      <span>AND</span>
-      <b id="and"></b>
-    </div>
-    <div class="item-hitung">
-      <span>OR</span>
-      <b id="or"></b>
-    </div>
-    <div class="hasil-hitung">
-      <span>HASIL</span>
-      <strong id="formula"></strong>
-    </div>
-  </div>
-</aside>
-      </section>
-    </div>
-
-       <!-- SECTION TABEL KEBENARAN -->
-=======
         <p id="reason" class="alasan">Lampu menyala otomatis karena sedang malam dan gelap.</p>
       </section>
     </div>
-
-    <!-- SECTION TABEL KEBENARAN -->
->>>>>>> 3d746e9285c0fc51dcbc82920b162366051b2f39
-    <section class="panel below">
-      <div class="judul">
-        <small>03 / PEMBUKTIAN</small>
-        <h2>Tabel Kebenaran</h2>
-        <p>Baris berwarna menunjukkan input yang sedang dipilih.</p>
-      </div>
-
-      <div class="scroll">
-        <table>
-          <thead>
-            <tr>
-              <th>x</th>
-              <th>y</th>
-              <th>z</th>
-              <th>z′</th>
-              <th>y · z′</th>
-              <th>F</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-
-          <tbody id="truth"></tbody>
-        </table>
-      </div>
-
-      <p class="footnote">
-        Σm(2,4,5,6,7) = ΠM(0,1,3) = x + yz′
-      </p>
-    </section>
-
   </main>
 
   <footer>
@@ -163,5 +79,4 @@
     <span>HTML · CSS · JavaScript</span>
   </footer>
 </body>
-
 </html>

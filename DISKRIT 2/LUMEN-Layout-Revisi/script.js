@@ -1,7 +1,6 @@
 const manual = document.getElementById('x');
 const waktu = document.getElementById('waktu');
 const sensor = document.getElementById('z');
-const tabel = document.getElementById('truth');
 
 function cekLampu() {
   let jam = Number(waktu.value) / 60;
@@ -9,10 +8,10 @@ function cekLampu() {
   let y = (jam >= 18 || jam < 6) ? 1 : 0;
   let z = Number(sensor.value);
 
-  // Fungsi Boolean: F = x + yz'
+  // Aljabar Boolean: F = x + yz'
   let notZ = 1 - z;
-  let and = y * notZ;
-  let hasil = (x === 1 || and === 1) ? 1 : 0;
+  let otomatis = y * notZ;
+  let hasil = (x === 1 || otomatis === 1) ? 1 : 0;
 
   document.getElementById('jam').textContent =
     String(jam).padStart(2, '0') + ':00';
@@ -21,7 +20,7 @@ function cekLampu() {
 
   document.getElementById('status').textContent = hasil ? 'MENYALA' : 'MATI';
   document.getElementById('formula').textContent =
-    'F = ' + x + ' + ' + and + ' = ' + hasil;
+    'F = ' + x + ' + ' + otomatis + ' = ' + hasil;
 
   document.getElementById('scene').classList.toggle('on', hasil === 1);
   document.getElementById('scene').classList.toggle('day', y === 0);
@@ -35,29 +34,6 @@ function cekLampu() {
     alasan = 'Lampu mati karena sensor mendeteksi cahaya.';
   }
   document.getElementById('reason').textContent = alasan;
-
-  // Tandai baris tabel yang cocok dengan input
-  for (let baris of tabel.rows) {
-    baris.classList.toggle('active', baris.dataset.input === '' + x + y + z);
-  }
-}
-
-// Delapan kombinasi nilai x, y, dan z
-for (let x = 0; x <= 1; x++) {
-  for (let y = 0; y <= 1; y++) {
-    for (let z = 0; z <= 1; z++) {
-      let notZ = 1 - z;
-      let and = y * notZ;
-      let hasil = (x === 1 || and === 1) ? 1 : 0;
-
-      tabel.innerHTML += `
-        <tr data-input="${x}${y}${z}">
-          <td>${x}</td><td>${y}</td><td>${z}</td>
-          <td>${notZ}</td><td>${and}</td><td>${hasil}</td>
-          <td>${hasil ? 'Menyala' : 'Mati'}</td>
-        </tr>`;
-    }
-  }
 }
 
 manual.onchange = cekLampu;
