@@ -271,3 +271,9 @@ footer {
   .alasan { font-size: 14px; }
   footer { flex-direction: column; }
 }
+
+/* Rumus tiga peubah pada hasil simulasi */
+.rumus { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; text-align: right; }
+.rumus small { font-size: 12px; font-weight: 700; color: #718397; }
+.rumus strong { font-size: 16px; white-space: normal; }
+@media (max-width: 480px) { .rumus strong { font-size: 13px; } }

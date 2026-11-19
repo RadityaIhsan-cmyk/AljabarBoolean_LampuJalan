@@ -20,7 +20,7 @@ function cekLampu() {
 
   document.getElementById('status').textContent = hasil ? 'MENYALA' : 'MATI';
   document.getElementById('formula').textContent =
-    'F = ' + x + ' + ' + otomatis + ' = ' + hasil;
+    'F = ' + x + ' + (' + y + ' · ' + notZ + ') = ' + hasil;
 
   document.getElementById('scene').classList.toggle('on', hasil === 1);
   document.getElementById('scene').classList.toggle('day', y === 0);
