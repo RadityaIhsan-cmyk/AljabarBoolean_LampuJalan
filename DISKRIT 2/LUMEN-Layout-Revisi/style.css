@@ -35,3 +35,49 @@ main { max-width: 1160px; padding: 38px 20px 65px; }
   .grid { grid-template-columns: 1fr; }
   .formula-card { margin-top: 30px; }
 }
+
+.ringkas-hitung{
+  margin-top:14px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.item-hitung{
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:10px;
+  padding:10px 12px;
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+
+.item-hitung span,
+.hasil-hitung span{
+  font-size:10px;
+  letter-spacing:1px;
+  font-weight:700;
+  color:#afc0cc;
+}
+
+.item-hitung b{
+  font-size:13px;
+  line-height:1.5;
+  color:white;
+}
+
+.hasil-hitung{
+  margin-top:4px;
+  background:rgba(255,255,255,0.12);
+  border-radius:10px;
+  padding:12px;
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+}
+
+.hasil-hitung strong{
+  font-size:18px;
+  color:white;
+}
