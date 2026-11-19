@@ -23,11 +23,4 @@ manual.onchange = cekLampu;
 sensor.onchange = cekLampu;
 waktu.oninput = cekLampu;
 
-document.getElementById('reset').onclick = function() {
-  manual.value = 0;
-  sensor.value = 0;
-  waktu.value = 0;
-  cekLampu();
-};
-
 cekLampu();

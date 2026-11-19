@@ -26,7 +26,6 @@
         <div class="timer">
           <div class="jam">
             <strong id="jam">00:00</strong>
-            <small id="y">y = 1 — Malam</small>
           </div>
           <input type="range" id="waktu" min="0" max="1380" step="60" value="0" aria-label="Geser jam simulasi">
           <div class="skala">
@@ -41,7 +40,6 @@
           <option value="1">1 — Terang</option>
         </select>
 
-        <button id="reset" type="button">↺ Reset simulasi</button>
       </section>
 
       <!-- Hasil simulasi -->
@@ -60,14 +58,14 @@
         <div class="status">
           <div>
             <small>KONDISI LAMPU</small>
-            <h2 id="status">MENYALA</h2>
+            <h2 class="kondisi-lampu"><span class="menyala">MENYALA</span><span class="mati">MATI</span></h2>
           </div>
           <div class="rumus">
             <small>F = x + yz′</small>
             <strong id="formula">F = 0 + (1 · 1) = 1</strong>
           </div>
         </div>
-        <p id="reason" class="alasan">Lampu menyala otomatis karena sedang malam dan gelap.</p>
+        <p class="alasan">Lampu menyala jika kendali manual aktif, atau saat malam dan gelap.</p>
       </section>
     </div>
   </main>

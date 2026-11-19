@@ -34,13 +34,6 @@ h2 {
 }
 
 .judul { margin-bottom: 23px; }
-.judul small {
-  color: #c9943a;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-}
-.judul h2 { margin-top: 7px; }
 
 label {
   display: block;
@@ -72,7 +65,6 @@ select {
   font-variant-numeric: tabular-nums;
   letter-spacing: -1px;
 }
-.jam small { color: #7b8e9b; font-size: 12px; font-weight: 700; }
 
 .timer input[type="range"] {
   width: 100%;
@@ -94,29 +86,6 @@ select {
   color: #7b8e9b;
   font-size: 11px;
   line-height: 1.6;
-}
-
-button {
-  width: 100%;
-  margin-top: 23px;
-  padding: 13px;
-  background: white;
-  color: #466073;
-  border: 1px solid #dce5eb;
-  border-radius: 10px;
-  font-weight: 700;
-  cursor: pointer;
-}
-button:hover { background: #f3f6f8; }
-
-.note {
-  margin: 19px 0 0;
-  padding: 15px;
-  background: #f5f8fa;
-  border-radius: 10px;
-  color: #718697;
-  font-size: 12px;
-  line-height: 1.8;
 }
 
 /* Ilustrasi lampu jalan */
@@ -277,3 +246,9 @@ footer {
 .rumus small { font-size: 12px; font-weight: 700; color: #718397; }
 .rumus strong { font-size: 16px; white-space: normal; }
 @media (max-width: 480px) { .rumus strong { font-size: 13px; } }
+
+/* Status lampu mengikuti kelas pada ilustrasi */
+.kondisi-lampu .menyala,
+.kondisi-lampu .mati { display: none; }
+.scene.on ~ .status .menyala { display: inline; }
+.scene:not(.on) ~ .status .mati { display: inline; }
